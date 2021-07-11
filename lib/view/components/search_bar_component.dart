@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:layout_challenge/view/design/colors.dart';
 
 class SearchBar extends StatelessWidget {
   const SearchBar({Key? key}) : super(key: key);
@@ -10,7 +9,6 @@ class SearchBar extends StatelessWidget {
       width: 300,
       height: 35,
       decoration: BoxDecoration(
-        color: const Color(fillColor),
         borderRadius: BorderRadius.circular(10),
         border: Border.all(
           width: 0.5,

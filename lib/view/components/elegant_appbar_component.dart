@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:layout_challenge/view/components/search_bar_component.dart';
-import 'package:layout_challenge/view/design/colors.dart';
 
 import 'account_preview_component.dart';
 
 class ElegantAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const ElegantAppBar({
-    Key? key,
-  }) : super(key: key);
+  final VoidCallback menuOnTap;
+
+  const ElegantAppBar({required this.menuOnTap});
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
@@ -15,21 +14,16 @@ class ElegantAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: const Color(backGroundColor),
       leading: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: const [
-          Icon(
-            Icons.menu,
-            color: Color(iconColor),
+        children: [
+          IconButton(
+            icon: const Icon(Icons.menu),
+            onPressed: menuOnTap,
           ),
           Text(
             "Dashboard",
-            style: TextStyle(
-              color: Color(titleTextColor),
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
-            ),
+            style: Theme.of(context).textTheme.headline5,
           ),
         ],
       ),
@@ -48,11 +42,9 @@ class ElegantAppBar extends StatelessWidget implements PreferredSizeWidget {
             children: const [
               Icon(
                 Icons.info,
-                color: Color(iconColor),
               ),
               Icon(
                 Icons.notifications,
-                color: Color(iconColor),
               ),
               AccountPreview(),
             ],

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'view/design/themes.dart';
 import 'view/pages/main_screen/main_screen_page.dart';
 
 void main() {
@@ -11,9 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Layout Challenge',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: AppTheme.lightTheme,
       home: const MainScreen(),
       debugShowCheckedModeBanner: false,
     );

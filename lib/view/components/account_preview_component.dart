@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:layout_challenge/view/design/colors.dart';
 
 class AccountPreview extends StatelessWidget {
   const AccountPreview({
@@ -23,14 +22,12 @@ class AccountPreview extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children: [
               SizedBox(
                 child: Center(
                   child: Text(
                     "Aaron Stanley",
-                    style: TextStyle(
-                      color: Color(titleTextColor),
-                    ),
+                    style: Theme.of(context).textTheme.subtitle2,
                   ),
                 ),
               ),
@@ -38,10 +35,7 @@ class AccountPreview extends StatelessWidget {
                 child: Center(
                   child: Text(
                     "Sales Manager",
-                    style: TextStyle(
-                      color: Color(commonTextColor),
-                      fontSize: 13,
-                    ),
+                    style: Theme.of(context).textTheme.caption,
                   ),
                 ),
               ),
