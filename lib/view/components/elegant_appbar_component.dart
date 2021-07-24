@@ -28,18 +28,13 @@ class ElegantAppBar extends StatelessWidget implements PreferredSizeWidget {
         ],
       ),
       leadingWidth: 180,
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: const [
-          SearchBar(),
-        ],
-      ),
       actions: [
         SizedBox(
-          width: 250,
+          width: 600,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: const [
+              SearchBar(),
               Icon(
                 Icons.info,
               ),

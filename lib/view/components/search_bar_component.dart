@@ -10,6 +10,7 @@ class SearchBar extends StatelessWidget {
       height: 35,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
+        color: Theme.of(context).cardColor,
         border: Border.all(
           width: 0.5,
         ),
