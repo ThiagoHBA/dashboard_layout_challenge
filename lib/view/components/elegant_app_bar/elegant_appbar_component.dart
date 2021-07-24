@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:layout_challenge/view/components/search_bar_component.dart';
-
-import 'account_preview_component.dart';
+import 'package:layout_challenge/view/components/account_preview/account_preview_component.dart';
+import 'package:layout_challenge/view/components/search_bar/search_bar_component.dart';
 
 class ElegantAppBar extends StatelessWidget implements PreferredSizeWidget {
   final VoidCallback menuOnTap;

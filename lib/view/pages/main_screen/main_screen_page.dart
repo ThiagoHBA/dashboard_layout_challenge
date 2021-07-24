@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:layout_challenge/view/components/elegant_appbar_component.dart';
-import 'package:layout_challenge/view/components/recent_activity_component.dart';
-import 'package:layout_challenge/view/components/sale_card_component.dart';
-import 'package:layout_challenge/view/components/sales_branch_analitycs_component.dart';
-import 'package:layout_challenge/view/components/side_menu_component.dart';
+import 'package:layout_challenge/view/components/elegant_app_bar/elegant_appbar_component.dart';
+import 'package:layout_challenge/view/components/recent_activity/recent_activity_component.dart';
+import 'package:layout_challenge/view/components/sale_card/sale_card_component.dart';
+import 'package:layout_challenge/view/components/sales_branch_analitycs/sales_branch_analitycs_component.dart';
+import 'package:layout_challenge/view/components/side_menu/side_menu_component.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
