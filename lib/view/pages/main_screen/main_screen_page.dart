@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:layout_challenge/view/components/elegant_appbar_component.dart';
+import 'package:layout_challenge/view/components/recent_activity_component.dart';
 import 'package:layout_challenge/view/components/sale_card_component.dart';
+import 'package:layout_challenge/view/components/sales_branch_analitycs_component.dart';
 import 'package:layout_challenge/view/components/side_menu_component.dart';
 
 class MainScreen extends StatefulWidget {
@@ -89,18 +91,51 @@ class _MainScreenState extends State<MainScreen> {
                       ),
                       Expanded(
                         flex: 2,
-                        child: Container(
-                          color: Colors.red,
-                          child: Row(),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              border: Border.all(width: 0.1),
+                            ),
+                            child: Row(),
+                          ),
                         ),
                       ),
                     ],
                   ),
                 ),
                 Expanded(
-                  flex: 3,
-                  child: Container(
-                    color: Colors.green,
+                  flex: 2,
+                  child: Column(
+                    children: [
+                      Expanded(
+                        flex: 3,
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              border: Border.all(width: 0.1),
+                            ),
+                            child: const RecentActivityComponent(),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              border: Border.all(width: 0.1),
+                            ),
+                            child: const SalesBranchAnalytics(),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
