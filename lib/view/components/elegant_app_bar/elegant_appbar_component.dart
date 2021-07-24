@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+
 import 'package:layout_challenge/view/components/account_preview/account_preview_component.dart';
 import 'package:layout_challenge/view/components/search_bar/search_bar_component.dart';
 
 class ElegantAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final VoidCallback menuOnTap;
-
-  const ElegantAppBar({required this.menuOnTap});
+  final VoidCallback? menuOnTap;
+  final bool small;
+  const ElegantAppBar({
+    Key? key,
+    this.menuOnTap,
+    this.small = false,
+  }) : super(key: key);
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
@@ -20,16 +25,17 @@ class ElegantAppBar extends StatelessWidget implements PreferredSizeWidget {
             icon: const Icon(Icons.menu),
             onPressed: menuOnTap,
           ),
-          Text(
-            "Dashboard",
-            style: Theme.of(context).textTheme.headline5,
-          ),
+          if (!small)
+            Text(
+              "Dashboard",
+              style: Theme.of(context).textTheme.headline5,
+            ),
         ],
       ),
-      leadingWidth: 180,
+      leadingWidth: small ? 50 : 180,
       actions: [
         SizedBox(
-          width: 600,
+          width: 550,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: const [

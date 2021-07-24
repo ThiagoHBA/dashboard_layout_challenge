@@ -5,8 +5,9 @@ class SaleCardComponent extends StatelessWidget {
   final Color iconBackGroundColor;
   final String titleValue;
   final String subtitleValue;
-  final Widget trendingIcon;
-  final Widget trendingValue;
+  final IconData trendingIcon;
+  final String trendingValue;
+  final Color trendingColor;
 
   const SaleCardComponent({
     Key? key,
@@ -16,54 +17,63 @@ class SaleCardComponent extends StatelessWidget {
     required this.subtitleValue,
     required this.trendingIcon,
     required this.trendingValue,
+    required this.trendingColor,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Container(
+      margin: const EdgeInsets.all(10.0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        border: Border.all(width: 0.1),
+      ),
       child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
-            border: Border.all(width: 0.1),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  width: 35,
-                  height: 35,
-                  decoration: BoxDecoration(
-                    color: iconBackGroundColor,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Center(
-                    child: icon,
-                  ),
-                ),
-                Text(
-                  titleValue,
-                  style: Theme.of(context).textTheme.headline5,
-                ),
-                Text(
-                  subtitleValue,
-                  style: Theme.of(context).textTheme.caption,
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    trendingIcon,
-                    const SizedBox(width: 5),
-                    trendingValue,
-                  ],
-                ),
-              ],
+        padding: const EdgeInsets.all(15.0),
+        child: Wrap(
+          direction: Axis.vertical,
+          alignment: WrapAlignment.end,
+          spacing: 10,
+          children: [
+            Container(
+              width: 35,
+              height: 35,
+              decoration: BoxDecoration(
+                color: iconBackGroundColor,
+                shape: BoxShape.circle,
+              ),
+              child: Center(
+                child: icon,
+              ),
             ),
-          ),
+            FittedBox(
+              child: Text(
+                titleValue,
+                style: Theme.of(context).textTheme.headline5,
+              ),
+            ),
+            FittedBox(
+              child: Text(
+                subtitleValue,
+                style: Theme.of(context).textTheme.caption,
+              ),
+            ),
+            FittedBox(
+              child: Wrap(
+                spacing: 5,
+                children: [
+                  Icon(
+                    trendingIcon,
+                    color: trendingColor,
+                  ),
+                  Text(
+                    trendingValue,
+                    style: TextStyle(color: trendingColor),
+                  )
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );

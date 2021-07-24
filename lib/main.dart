@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Layout Challenge',
       theme: AppTheme.lightTheme,
-      home: const MainScreen(),
+      home: const MainScreenPage(),
       debugShowCheckedModeBanner: false,
     );
   }

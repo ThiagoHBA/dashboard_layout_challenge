@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:layout_challenge/view/components/side_menu/side_menu_button_component.dart';
 
@@ -9,7 +8,7 @@ class SideMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Drawer(
       child: Container(
         color: Theme.of(context).primaryColor,
         child: Padding(
