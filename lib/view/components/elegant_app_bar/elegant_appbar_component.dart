@@ -25,6 +25,7 @@ class _ElegantAppBarState extends State<ElegantAppBar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      automaticallyImplyLeading: false,
       leading: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -32,19 +33,17 @@ class _ElegantAppBarState extends State<ElegantAppBar> {
             icon: const Icon(Icons.menu),
             onPressed: widget.menuOnTap,
           ),
-          if (!widget.small && !_activateSearchBar)
-            Text(
-              "Dashboard",
-              style: Theme.of(context).textTheme.headline5,
-            ),
         ],
       ),
       title: _activateSearchBar
           ? const SearchTextField(
               prefixIcon: false,
             )
-          : Container(),
-      leadingWidth: widget.small || _activateSearchBar ? 50 : 180,
+          : Text(
+              "Dashboard",
+              overflow: TextOverflow.ellipsis,
+              style: Theme.of(context).textTheme.headline5,
+            ),
       actions: [
         SizedBox(
           width: widget.mobile ? 150 : 550,
@@ -110,7 +109,7 @@ class SearchTextField extends StatelessWidget {
                 )
               : const SizedBox(),
           alignLabelWithHint: true,
-          hintText: 'Search report, analytic or anything here',
+          hintText: 'Search...',
           contentPadding: const EdgeInsets.symmetric(vertical: 18),
           hintStyle: Theme.of(context).textTheme.caption,
         ),
