@@ -103,13 +103,16 @@ class SearchTextField extends StatelessWidget {
           enabledBorder: InputBorder.none,
           errorBorder: InputBorder.none,
           disabledBorder: InputBorder.none,
-          prefixIcon: prefixIcon ? const Icon(Icons.search) : const SizedBox(),
+          prefixIcon: prefixIcon
+              ? Icon(
+                  Icons.search,
+                  color: Theme.of(context).appBarTheme.iconTheme?.color,
+                )
+              : const SizedBox(),
           alignLabelWithHint: true,
           hintText: 'Search report, analytic or anything here',
           contentPadding: const EdgeInsets.symmetric(vertical: 18),
-          hintStyle: const TextStyle(
-            fontSize: 10,
-          ),
+          hintStyle: Theme.of(context).textTheme.caption,
         ),
       ),
     );

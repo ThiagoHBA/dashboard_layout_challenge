@@ -18,16 +18,23 @@ class AppTheme {
 
   ///Setup colors for [DarkTheme]
 
+  ///[Colors] setup
   static const _darkPrimaryColor = Color(0xFF170A4B);
-  static const _darkAccentColor = Color(0xFF70CF98);
-  static const _darkBackGroundColor = Color(0xFFFFFFFF);
-  static const _darkAppBarIconColor = Color(0xFF413A5D);
-  static const _darkSideMenuIconColor = Color(0xFFD2CCE3);
-  static const _darkTitleTextColor = Color(0xFF413A5D);
-  static const _darkCommonTextColor = Color(0xFF6D6B7A);
+  static const _darkAccentColor = Color(0xFFFFFFFF);
+  static const _darkBackGroundColor = Color(0xFF373737);
+
+  ///[Icons Colors] setup
+  static const _darkAppBarIconColor = Color(0xFFE7E7E7);
+  static const _darkSideMenuIconColor = Color(0xFFE7E7E7);
+
+  ///[Text Colors] setup
+  static const _darkTitleTextColor = Color(0xFFFFFFFF);
+  static const _darkCommonTextColor = Color(0xFFFFFFFF);
   static const _darkSelectedTextColor = Color(0xFF30537F);
+
+  ///[Buttons Colors] setup
   static const _darkSelectedButtonColor = Color(0xFF21205E);
-  static const _darkFillColor = Color(0xFFF7F6FB);
+  static const _darkFillColor = Color(0xFF6F6F6F);
 
   static final ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: _backGroundColor,
@@ -37,6 +44,7 @@ class AppTheme {
       iconTheme: IconThemeData(
         color: _appBarIconColor,
       ),
+      shadowColor: _accentColor,
     ),
     iconTheme: const IconThemeData(
       color: _sideMenuIconColor,
@@ -80,6 +88,7 @@ class AppTheme {
       iconTheme: IconThemeData(
         color: _darkAppBarIconColor,
       ),
+      shadowColor: _darkAccentColor,
     ),
     iconTheme: const IconThemeData(
       color: _darkSideMenuIconColor,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:layout_challenge/main.dart';
 import 'package:layout_challenge/view/components/side_menu/side_menu_button_component.dart';
 
 class SideMenu extends StatelessWidget {
@@ -8,6 +9,7 @@ class SideMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool _darkMode = MyApp.darkThemeNotifier.value;
     return Drawer(
       child: Container(
         color: Theme.of(context).primaryColor,
@@ -48,6 +50,16 @@ class SideMenu extends StatelessWidget {
                 icon: Icons.contacts,
                 title: "Contacts",
                 onTap: () {},
+              ),
+              SideMenuButton(
+                icon: !MyApp.darkThemeNotifier.value
+                    ? Icons.dark_mode
+                    : Icons.light_mode,
+                title: "Theme",
+                onTap: () {
+                  MyApp.darkThemeNotifier.value =
+                      !MyApp.darkThemeNotifier.value;
+                },
               ),
               const Spacer(flex: 7),
               SideMenuButton(

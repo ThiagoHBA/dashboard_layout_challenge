@@ -39,10 +39,7 @@ class _MainScreenWebState extends State<MainScreenWeb> {
                           children: const [
                             Expanded(
                               child: SaleCardComponent(
-                                icon: Icon(
-                                  Icons.local_mall,
-                                  color: Colors.white,
-                                ),
+                                icon: Icon(Icons.local_mall),
                                 titleValue: '2431',
                                 subtitleValue: 'Number of Sales',
                                 iconBackGroundColor: Colors.indigo,
@@ -53,10 +50,7 @@ class _MainScreenWebState extends State<MainScreenWeb> {
                             ),
                             Expanded(
                               child: SaleCardComponent(
-                                icon: Icon(
-                                  Icons.equalizer,
-                                  color: Colors.white,
-                                ),
+                                icon: Icon(Icons.equalizer),
                                 titleValue: '\$ 24.301',
                                 subtitleValue: 'Sales Revenue',
                                 iconBackGroundColor: Colors.lightBlue,
@@ -67,10 +61,7 @@ class _MainScreenWebState extends State<MainScreenWeb> {
                             ),
                             Expanded(
                               child: SaleCardComponent(
-                                icon: Icon(
-                                  Icons.attach_money,
-                                  color: Colors.white,
-                                ),
+                                icon: Icon(Icons.attach_money),
                                 titleValue: '1234',
                                 subtitleValue: 'Averige Price',
                                 iconBackGroundColor: Colors.greenAccent,
@@ -110,7 +101,10 @@ class _MainScreenWebState extends State<MainScreenWeb> {
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              border: Border.all(width: 0.1),
+                              border: Border.all(
+                                width: 0.1,
+                                color: Theme.of(context).accentColor,
+                              ),
                             ),
                             child: const RecentActivityComponent(),
                           ),

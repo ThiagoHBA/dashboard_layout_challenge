@@ -26,7 +26,7 @@ class SaleCardComponent extends StatelessWidget {
       margin: const EdgeInsets.all(10.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
-        border: Border.all(width: 0.1),
+        border: Border.all(width: 0.1, color: Theme.of(context).accentColor),
       ),
       child: Padding(
         padding: const EdgeInsets.all(15.0),

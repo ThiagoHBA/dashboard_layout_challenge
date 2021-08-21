@@ -43,10 +43,11 @@ class RecentActivitysTile extends StatelessWidget {
       title: RichText(
         text: TextSpan(
           children: [
-            TextSpan(text: titleText),
             TextSpan(
-              text: ' "$highlightedTitleText"',
-              style: Theme.of(context).textTheme.subtitle2,
+                text: titleText, style: Theme.of(context).textTheme.subtitle2),
+            TextSpan(
+              text: ': "$highlightedTitleText"',
+              style: Theme.of(context).textTheme.caption,
             )
           ],
         ),

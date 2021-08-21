@@ -7,14 +7,20 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  static final darkThemeNotifier = ValueNotifier<bool>(false);
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Layout Challenge',
-      theme: AppTheme.lightTheme,
-      darkTheme: AppTheme.darkTheme,
-      home: const MainScreenPage(),
-      debugShowCheckedModeBanner: false,
+    return ValueListenableBuilder(
+      valueListenable: darkThemeNotifier,
+      builder: (BuildContext context, bool darkMode, Widget? child) =>
+          MaterialApp(
+        title: 'Layout Challenge',
+        theme: AppTheme.lightTheme,
+        darkTheme: AppTheme.darkTheme,
+        themeMode: darkMode ? ThemeMode.dark : ThemeMode.light,
+        home: const MainScreenPage(),
+        debugShowCheckedModeBanner: false,
+      ),
     );
   }
 }
