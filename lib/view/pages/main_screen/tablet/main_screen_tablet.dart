@@ -95,6 +95,7 @@ class _MainScreenTabletState extends State<MainScreenTablet> {
                         padding: const EdgeInsets.all(10.0),
                         child: Container(
                           decoration: BoxDecoration(
+                            color: Colors.red,
                             borderRadius: BorderRadius.circular(15),
                             border: Border.all(width: 0.1),
                           ),

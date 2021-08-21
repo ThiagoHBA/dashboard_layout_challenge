@@ -89,6 +89,7 @@ class _MainScreenWebState extends State<MainScreenWeb> {
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
+                              color: Colors.red,
                               border: Border.all(width: 0.1),
                             ),
                             child: Row(),
