@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:layout_challenge/view/components/account_preview/account_preview_component.dart';
+import 'package:layout_challenge/view/pages/main_screen/widgets/account_preview_component.dart';
 
 class ElegantAppBar extends StatefulWidget implements PreferredSizeWidget {
   final VoidCallback? menuOnTap;

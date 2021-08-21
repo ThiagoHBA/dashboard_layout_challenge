@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:layout_challenge/view/components/revenue_analytics/revenue_analytics_tabs.dart';
-import 'package:layout_challenge/view/components/sale_card/sale_card_component.dart';
+import 'package:layout_challenge/view/components/revenue_analytics_tabs.dart';
+import 'package:layout_challenge/view/pages/main_screen/widgets/sale_card_component.dart';
 
 class RevenueAnalytics extends StatefulWidget {
   const RevenueAnalytics({Key? key}) : super(key: key);

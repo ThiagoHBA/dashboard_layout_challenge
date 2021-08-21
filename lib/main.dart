@@ -1,10 +1,13 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'view/design/themes.dart';
 import 'view/pages/main_screen/main_screen_page.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(
+      DevicePreview(
+        builder: (context) => MyApp(),
+      ),
+    );
 
 class MyApp extends StatelessWidget {
   static final darkThemeNotifier = ValueNotifier<bool>(false);

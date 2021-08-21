@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:layout_challenge/view/components/elegant_app_bar/elegant_appbar_component.dart';
-import 'package:layout_challenge/view/components/recent_activity/recent_activity_component.dart';
-import 'package:layout_challenge/view/components/revenue_analytics/revenue_analytics.dart';
-import 'package:layout_challenge/view/components/sale_card/sale_card_component.dart';
-import 'package:layout_challenge/view/components/sales_branch_analitycs/sales_branch_analitycs_component.dart';
-import 'package:layout_challenge/view/components/side_menu/side_menu_component.dart';
+import 'package:layout_challenge/view/pages/main_screen/widgets/elegant_appbar_component.dart';
+import 'package:layout_challenge/view/pages/main_screen/widgets/recent_activity_component.dart';
+import 'package:layout_challenge/view/pages/main_screen/widgets/revenue_analytics.dart';
+import 'package:layout_challenge/view/pages/main_screen/widgets/sale_card_component.dart';
+import 'package:layout_challenge/view/pages/main_screen/widgets/sales_branch_analitycs_component.dart';
+import 'package:layout_challenge/view/pages/main_screen/widgets/side_menu_component.dart';
 
 class MainScreenMobile extends StatefulWidget {
   const MainScreenMobile({Key? key}) : super(key: key);

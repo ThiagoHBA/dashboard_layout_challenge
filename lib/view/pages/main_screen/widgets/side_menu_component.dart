@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:layout_challenge/main.dart';
-import 'package:layout_challenge/view/components/side_menu/side_menu_button_component.dart';
+import 'package:layout_challenge/view/components/side_menu_button_component.dart';
 import 'package:layout_challenge/view/design/assets.dart';
 
 class SideMenu extends StatelessWidget {

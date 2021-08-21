@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:layout_challenge/view/components/recent_activity/recent_activity_list_tile_component.dart';
+import 'package:layout_challenge/view/components/recent_activity_list_tile_component.dart';
 
 class RecentActivityComponent extends StatelessWidget {
   final bool small;

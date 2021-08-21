@@ -31,7 +31,8 @@ dependencies:
   flutter_svg: ^0.22.0
   lint: ^1.5.3
   responsive_builder: ^0.4.1
-
+  device_preview: ^0.7.4
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
