@@ -107,7 +107,7 @@ class _MainScreenMobileState extends State<MainScreenMobile> {
                           () => _selectedIndex = 1,
                         );
                       },
-                      title: "Revenue Analytics",
+                      title: "Revenue\nAnalytics",
                     ),
                     TextButtonComponent(
                       selected: _selectedIndex == 2,
@@ -116,7 +116,7 @@ class _MainScreenMobileState extends State<MainScreenMobile> {
                           () => _selectedIndex = 2,
                         );
                       },
-                      title: "Sales Branch Analytics",
+                      title: "Sales Branch\nAnalytics",
                     ),
                   ],
                 ),
@@ -160,12 +160,19 @@ class TextButtonComponent extends StatelessWidget {
         onTap: onTap,
         child: Container(
           margin: const EdgeInsets.all(15.0),
-          child: Text(
-            title,
-            textAlign: TextAlign.center,
-            style: selected
-                ? Theme.of(context).textTheme.headline6
-                : Theme.of(context).textTheme.button,
+          padding: const EdgeInsets.all(5.0),
+          decoration: BoxDecoration(
+            color: selected ? Theme.of(context).cardColor : null,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: FittedBox(
+            child: Text(
+              title,
+              textAlign: TextAlign.center,
+              style: selected
+                  ? Theme.of(context).textTheme.headline6
+                  : Theme.of(context).textTheme.button,
+            ),
           ),
         ),
       ),

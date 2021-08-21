@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:layout_challenge/view/design/assets.dart';
 
 class AccountPreview extends StatelessWidget {
   const AccountPreview({
@@ -13,9 +14,7 @@ class AccountPreview extends StatelessWidget {
         SizedBox(
           width: 35,
           height: 35,
-          child: SvgPicture.asset(
-            'images/female_avatar.svg',
-          ),
+          child: SvgPicture.asset(DesingAssets.femaleAvatar),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 5),
