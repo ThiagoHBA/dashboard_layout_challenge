@@ -9,7 +9,6 @@ class SideMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool _darkMode = MyApp.darkThemeNotifier.value;
     return Drawer(
       child: Container(
         color: Theme.of(context).primaryColor,

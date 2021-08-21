@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class AccountPreview extends StatelessWidget {
   const AccountPreview({
@@ -9,12 +10,11 @@ class AccountPreview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
+        SizedBox(
           width: 35,
           height: 35,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(100),
-            color: Colors.black,
+          child: SvgPicture.asset(
+            'images/female_avatar.svg',
           ),
         ),
         Padding(
@@ -26,7 +26,7 @@ class AccountPreview extends StatelessWidget {
               SizedBox(
                 child: Center(
                   child: Text(
-                    "Aaron Stanley",
+                    "Katirina",
                     style: Theme.of(context).textTheme.subtitle2,
                   ),
                 ),

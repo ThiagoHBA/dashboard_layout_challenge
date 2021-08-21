@@ -162,6 +162,7 @@ class TextButtonComponent extends StatelessWidget {
           margin: const EdgeInsets.all(15.0),
           child: Text(
             title,
+            textAlign: TextAlign.center,
             style: selected
                 ? Theme.of(context).textTheme.headline6
                 : Theme.of(context).textTheme.button,
