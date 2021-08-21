@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SaleCardComponent extends StatelessWidget {
-  final Widget icon;
+  final Widget? icon;
   final Color iconBackGroundColor;
   final String titleValue;
   final String subtitleValue;
@@ -11,13 +11,13 @@ class SaleCardComponent extends StatelessWidget {
 
   const SaleCardComponent({
     Key? key,
-    required this.icon,
     required this.iconBackGroundColor,
     required this.titleValue,
     required this.subtitleValue,
     required this.trendingIcon,
     required this.trendingValue,
     required this.trendingColor,
+    this.icon,
   }) : super(key: key);
 
   @override
@@ -35,17 +35,18 @@ class SaleCardComponent extends StatelessWidget {
           alignment: WrapAlignment.end,
           spacing: 10,
           children: [
-            Container(
-              width: 35,
-              height: 35,
-              decoration: BoxDecoration(
-                color: iconBackGroundColor,
-                shape: BoxShape.circle,
+            if (icon != null)
+              Container(
+                width: 35,
+                height: 35,
+                decoration: BoxDecoration(
+                  color: iconBackGroundColor,
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: icon,
+                ),
               ),
-              child: Center(
-                child: icon,
-              ),
-            ),
             FittedBox(
               child: Text(
                 titleValue,

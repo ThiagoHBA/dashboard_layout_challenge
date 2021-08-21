@@ -60,7 +60,7 @@ class _MainScreenMobileState extends State<MainScreenMobile> {
                             Icons.equalizer,
                             color: Colors.white,
                           ),
-                          titleValue: '\$ 24.301',
+                          titleValue: 'g',
                           subtitleValue: 'Sales Revenue',
                           iconBackGroundColor: Colors.lightBlue,
                           trendingIcon: Icons.trending_up,
