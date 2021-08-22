@@ -18,6 +18,8 @@ class MyApp extends StatelessWidget {
       builder: (BuildContext context, bool darkMode, Widget? child) =>
           MaterialApp(
         title: 'Layout Challenge',
+        locale: DevicePreview.locale(context), // Add the locale here
+        builder: DevicePreview.appBuilder,
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
         themeMode: darkMode ? ThemeMode.dark : ThemeMode.light,

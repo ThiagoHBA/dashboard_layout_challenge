@@ -44,6 +44,7 @@ class _ElegantAppBarState extends State<ElegantAppBar> {
               overflow: TextOverflow.ellipsis,
               style: Theme.of(context).textTheme.headline5,
             ),
+      centerTitle: false,
       actions: [
         SizedBox(
           width: widget.mobile ? 150 : 550,

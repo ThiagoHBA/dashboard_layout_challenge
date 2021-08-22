@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:layout_challenge/view/pages/main_screen/widgets/elegant_appbar_component.dart';
 import 'package:layout_challenge/view/pages/main_screen/widgets/recent_activity_component.dart';
+import 'package:layout_challenge/view/pages/main_screen/widgets/revenue_analytics.dart';
 import 'package:layout_challenge/view/pages/main_screen/widgets/sale_card_component.dart';
 import 'package:layout_challenge/view/pages/main_screen/widgets/sales_branch_analitycs_component.dart';
 import 'package:layout_challenge/view/pages/main_screen/widgets/side_menu_component.dart';
@@ -39,10 +40,10 @@ class _MainScreenTabletState extends State<MainScreenTablet> {
                         scrollDirection: Axis.horizontal,
                         padding: EdgeInsets.zero,
                         child: Row(
-                          children: const [
+                          children: [
                             SizedBox(
-                              width: 220,
-                              child: SaleCardComponent(
+                              width: MediaQuery.of(context).size.width * 0.25,
+                              child: const SaleCardComponent(
                                 icon: Icon(
                                   Icons.local_mall,
                                   color: Colors.white,
@@ -56,8 +57,8 @@ class _MainScreenTabletState extends State<MainScreenTablet> {
                               ),
                             ),
                             SizedBox(
-                              width: 220,
-                              child: SaleCardComponent(
+                              width: MediaQuery.of(context).size.width * 0.25,
+                              child: const SaleCardComponent(
                                 icon: Icon(
                                   Icons.equalizer,
                                   color: Colors.white,
@@ -71,8 +72,8 @@ class _MainScreenTabletState extends State<MainScreenTablet> {
                               ),
                             ),
                             SizedBox(
-                              width: 220,
-                              child: SaleCardComponent(
+                              width: MediaQuery.of(context).size.width * 0.25,
+                              child: const SaleCardComponent(
                                 icon: Icon(
                                   Icons.attach_money,
                                   color: Colors.white,
@@ -89,19 +90,9 @@ class _MainScreenTabletState extends State<MainScreenTablet> {
                         ),
                       ),
                     ),
-                    Expanded(
-                      flex: 2,
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(width: 0.1),
-                          ),
-                          child: Row(),
-                        ),
-                      ),
+                    const Expanded(
+                      flex: 2,  
+                      child: RevenueAnalytics(),
                     ),
                   ],
                 ),

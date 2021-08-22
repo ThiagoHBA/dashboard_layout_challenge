@@ -40,7 +40,10 @@ class _MainScreenWebState extends State<MainScreenWeb> {
                           children: const [
                             Expanded(
                               child: SaleCardComponent(
-                                icon: Icon(Icons.local_mall),
+                                icon: Icon(
+                                  Icons.local_mall,
+                                  color: Colors.white,
+                                ),
                                 titleValue: '2431',
                                 subtitleValue: 'Number of Sales',
                                 iconBackGroundColor: Colors.indigo,
@@ -51,7 +54,10 @@ class _MainScreenWebState extends State<MainScreenWeb> {
                             ),
                             Expanded(
                               child: SaleCardComponent(
-                                icon: Icon(Icons.equalizer),
+                                icon: Icon(
+                                  Icons.equalizer,
+                                  color: Colors.white,
+                                ),
                                 titleValue: '\$ 24.301',
                                 subtitleValue: 'Sales Revenue',
                                 iconBackGroundColor: Colors.lightBlue,
@@ -62,7 +68,10 @@ class _MainScreenWebState extends State<MainScreenWeb> {
                             ),
                             Expanded(
                               child: SaleCardComponent(
-                                icon: Icon(Icons.attach_money),
+                                icon: Icon(
+                                  Icons.attach_money,
+                                  color: Colors.white,
+                                ),
                                 titleValue: '1234',
                                 subtitleValue: 'Averige Price',
                                 iconBackGroundColor: Colors.greenAccent,

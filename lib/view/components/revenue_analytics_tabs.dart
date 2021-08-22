@@ -21,10 +21,12 @@ class RevenueAnalyticsTabs extends StatelessWidget {
           color: selected ? Colors.lightBlue[50] : null,
           borderRadius: BorderRadius.circular(10),
         ),
-        child: Text(
-          title,
-          style: TextStyle(
-            fontWeight: selected ? FontWeight.bold : FontWeight.normal,
+        child: Center(
+          child: Text(
+            title,
+            style: TextStyle(
+              fontWeight: selected ? FontWeight.bold : FontWeight.normal,
+            ),
           ),
         ),
       ),
