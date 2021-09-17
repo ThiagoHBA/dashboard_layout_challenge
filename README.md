@@ -16,6 +16,13 @@ A video containing a demonstration of how responsiveness worked for this project
 
 ![image](https://user-images.githubusercontent.com/56696275/133536275-7bd11ce3-ae29-47a5-94ef-2ed0349282a5.png)
 
+## Tablet layout
+
+![image](https://user-images.githubusercontent.com/56696275/133713977-00eacc74-6620-47be-b4ba-e9e72d5dab44.png)
+
+## Mobile layout
+
+![image](https://user-images.githubusercontent.com/56696275/133714073-9e2ee35e-9ecb-444a-9d81-8cf3afc0f5a6.png)
 
 ## Getting Started
 
